@@ -5,32 +5,32 @@ let testAnswers = [];
 let awaitingConfirmation = false;
 const questions = [
     {
-        text: "Em geral, você diria que gosta de passar um tempinho sozinha(o)?",
+        text: "Eu gosto de passar tempo sozinha(o).",
         options: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
         scores: [-2, -1, 0, 1, 2]
     },
     {
-        text: "Você se considera uma pessoa que adora uma boa conversa?",
+        text: "Eu sou uma pessoa muito sociável.",
         options: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
         scores: [-2, -1, 0, 1, 2]
     },
     {
-        text: "E o que me diz sobre se perder em pensamentos, é algo que acontece com você?",
+        text: "Eu frequentemente fico perdida(o) em pensamentos.",
         options: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
         scores: [-2, -1, 0, 1, 2]
     },
     {
-        text: "Vamos falar de criatividade, como você se descreveria nesse ponto?",
+        text: "Eu sou uma pessoa criativa.",
         options: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
         scores: [-2, -1, 0, 1, 2]
     },
     {
-        text: "Sendo sincera(o), você se pega com frequência preocupada(o)?",
+        text: "Eu estou sempre preocupada(o)",
         options: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
         scores: [-2, -1, 0, 1, 2]
     },
     {
-        text: "E sobre a calma, você diria que a possui mesmo em momentos mais tensos?",
+        text: "Eu me sinto calma(o) em situações estressantes.",
         options: ["Discordo totalmente", "Discordo", "Neutro", "Concordo", "Concordo totalmente"],
         scores: [-2, -1, 0, 1, 2]
     }
@@ -96,7 +96,7 @@ function addMessage(message, type) {
 
 function handleName(name) {
     userName = name;
-    addMessage("Agora, para te enviar seu resultado, qual é o seu e-mail?", 'prompt-message');
+    addMessage("Qual é o seu e-mail?", 'prompt-message');
     document.getElementById('user-input').placeholder = "Insira seu melhor e-mail aqui";
     currentStep++;
 }
@@ -107,7 +107,7 @@ function handleEmail(email) {
         return;
     }
     userEmail = email;
-    addMessage("Perfeito! Agora, você está pronto para iniciar seu teste de personalidade?", 'prompt-message');
+    addMessage("Perfeito! Você está pronto para iniciar seu teste de personalidade?", 'prompt-message');
     document.getElementById('user-input').placeholder = "Digite 'sim' ou 'estou pronto'";
     awaitingConfirmation = true;
     currentStep++;
@@ -116,7 +116,7 @@ function handleEmail(email) {
 function handleConfirmation(answer) {
     const answerLower = answer.toLowerCase();
     if (answerLower === "sim" || answerLower === "estou" || answerLower === "estou pronto") {
-        addMessage("Vamos começar, então!", 'prompt-message');
+        addMessage("Então, vamos lá!", 'prompt-message');
         startTest();
         awaitingConfirmation = false;
     } else {
@@ -239,8 +239,7 @@ function calculateScores() {
 function showResults() {
      document.getElementById('user-input').classList.remove('hidden');
        document.querySelectorAll('.radio-options').forEach(element => element.remove());
-       addMessage("Pronto! Aqui está o resultado do seu teste de personalidade", "prompt-message");
-       addMessage(` ${userName}, aqui está o resultado do seu teste de personalidade`,'prompt-message');
+       addMessage(`Pronto ${userName}, aqui está o resultado do seu teste de personalidade`,'prompt-message');
     let scores = calculateScores();
     radarChartConfig.data.datasets[0].data = scores;
     const canvas = document.createElement('canvas');
@@ -330,4 +329,4 @@ document.getElementById('user-input').addEventListener('keypress', function (eve
     }
 });
 addMessage("Bem-vindo(a)! Sou eu, seu teste de personalidade.", 'prompt-message');
-addMessage("Para começarmos, qual nome você gostaria de usar?", 'prompt-message');
+addMessage("Para começarmos, como gostaria de ser chamada(o)?", 'prompt-message');
