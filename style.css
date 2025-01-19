@@ -73,9 +73,9 @@ body {
 }
 
 .results-message {
-    background-color: #dcedc8;
+    background-color: #f0f0f0;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 10px;
     align-self: flex-start;
     max-width: 80%;
