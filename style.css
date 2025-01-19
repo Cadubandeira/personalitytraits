@@ -53,9 +53,9 @@ body {
 }
 
 .prompt-message {
-    background-color: #f3e0fa;
+    background-color: #f0f0f0;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 10px;
     align-self: flex-start;
     max-width: 80%;
