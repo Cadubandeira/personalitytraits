@@ -121,16 +121,16 @@ body {
 
 
 #scroll-wrapper::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #cbe3dc;
     border-radius: 4px;
 }
 
 #scroll-wrapper::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #9fb3ad;
 }
 
 #scroll-wrapper:hover::-webkit-scrollbar-thumb {
-    background: #555;
+    background: #9fb3ad;
       opacity: 1;
 }
 #scroll-wrapper:hover::-webkit-scrollbar {
