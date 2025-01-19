@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    background-color: #9ba79e;
+    background: linear-gradient(45deg, #f3e0fa, #e0faf2);
 }
 
 .container {
@@ -46,14 +46,14 @@ body {
     padding: 10px;
     margin: 10px 0;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    width: 98%;
+    border-radius: 12px;
+    width: 100%;
     box-sizing: border-box;
     font-size: 1em;
 }
 
 .prompt-message {
-    background-color: #f0f0f0;
+    background-color: #f3e0fa;
     padding: 10px;
     border-radius: 10px;
     margin-bottom: 10px;
@@ -63,9 +63,9 @@ body {
 }
 
 .user-message {
-    background-color: #e0f7fa;
+    background-color: #e0faf2;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 12px;
     margin-bottom: 10px;
     align-self: flex-end;
     max-width: 80%;
