@@ -1,0 +1,137 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.container {
+    background-color: white;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 80%;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    height: 90vh;
+}
+
+#scroll-wrapper {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding-right: 10px; /* Creates a space to avoid scrollbar overlay */
+    display:flex;
+    flex-direction:column;
+}
+
+
+#chat-area {
+
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-area {
+    padding: 10px;
+}
+
+
+#user-input {
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    width: 98%;
+    box-sizing: border-box;
+    font-size: 1em;
+}
+
+.prompt-message {
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.user-message {
+    background-color: #e0f7fa;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-end;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.results-message {
+    background-color: #dcedc8;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    align-self: flex-start;
+    max-width: 80%;
+    word-wrap: break-word;
+}
+
+.radio-options {
+    display: flex;
+    flex-direction: column;
+}
+
+.radio-options label {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    margin-bottom: 5px;
+    cursor: pointer;
+    background-color: #fff;
+
+}
+
+.radio-options label:hover {
+    background-color: #f0f0f0;
+}
+
+.radio-options input[type="radio"] {
+    margin-right: 5px;
+}
+
+.hidden {
+    display: none;
+}
+
+
+#scroll-wrapper::-webkit-scrollbar {
+    width: 8px;
+  opacity: 0.5;
+}
+
+#scroll-wrapper::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+
+#scroll-wrapper::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+#scroll-wrapper::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+#scroll-wrapper:hover::-webkit-scrollbar-thumb {
+    background: #555;
+      opacity: 1;
+}
+#scroll-wrapper:hover::-webkit-scrollbar {
+     opacity: 1;
+}
