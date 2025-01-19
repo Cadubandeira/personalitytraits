@@ -88,17 +88,17 @@ body {
 }
 
 .radio-options label {
-    padding: 5px;
+    padding: 8px;
     border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 5px;
+    border-radius: 12px;
+    margin-bottom: 8px;
     cursor: pointer;
     background-color: #fff;
 
 }
 
 .radio-options label:hover {
-    background-color: #f0f0f0;
+    background-color: #dff9f1;
 }
 
 .radio-options input[type="radio"] {
